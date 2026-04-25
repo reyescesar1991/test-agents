@@ -1,1 +1,79 @@
-/* You can add global styles to this file, and also import other style files */
+/* 
+  Design System: Taste Standard 
+  Applying Design System from .agent/DESIGN.md
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+  /* Core Palette */
+  --canvas-white: #F9FAFB;
+  --pure-surface: #FFFFFF;
+  --charcoal-ink: #18181B;
+  --steel-secondary: #71717A;
+  --muted-slate: #94A3B8;
+  
+  /* Accents */
+  --electric-blue: #3B82F6;
+  --deep-rose: #E11D48;
+  
+  /* Structural */
+  --whisper-border: rgba(226, 232, 240, 0.5);
+  --diffused-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+  --border-radius-lg: 2.5rem;
+  
+  /* Typography */
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--canvas-white);
+  color: var(--charcoal-ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Global Utility Classes */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  
+  @media (max-width: 1024px) {
+    padding: 0 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
